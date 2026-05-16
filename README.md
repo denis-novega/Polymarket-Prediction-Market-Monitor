@@ -40,15 +40,13 @@ settings.py                 Environment-based configuration
 ## Installation
 
 ```bash
-git clone https://github.com/<your-username>/polymarket-prediction-market-monitor.git
+git clone https://github.com/denis-novega/polymarket-prediction-market-monitor.git
 cd polymarket-prediction-market-monitor
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
 ```
-
-Edit `.env` before using execution-related modules. Read-only scanners can usually run with the default public endpoints.
 
 ## Example usage
 
@@ -101,6 +99,4 @@ BUNDLE\_UNIT=1.0
 For each candidate market or event bundle, the scanner retrieves token-level order books and walks available price levels to estimate executable VWAP. It then compares the aggregate cost or revenue of all relevant outcomes against the bundle settlement value. A signal is emitted only when the computed edge exceeds the configured threshold after optional fee and sizing constraints.
 
 This makes the monitor more conservative than a top-of-book scanner: a displayed imbalance is filtered by actual depth available at the requested size.
-
-## 
 
