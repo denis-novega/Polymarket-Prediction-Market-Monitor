@@ -1,0 +1,9 @@
+requests
+httpx
+python-dotenv
+python-dateutil
+py-clob-client
+curl-cffi
+rich
+tenacity
+anyio
